@@ -1,22 +1,24 @@
 package ru.itpark.domain;
 
 public class House {
-    private String house;
+    private int id;
+    private String name;
     private int price;
     private String district;
 
-    public House(String house, int price, String district) {
-        this.house = house;
+    public House(String name, int price, String district, int id) {
+        this.name = name;
         this.price = price;
         this.district = district;
+        this.id = id;
     }
 
-    public String getHouse() {
-        return house;
+    public String getName() {
+        return name;
     }
 
-    public void setHouse(String house) {
-        this.house = house;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getPrice() {
@@ -31,14 +33,25 @@ public class House {
         return district;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public void setDistrict(String district) {
         this.district = district;
+
+
     }
 
     @Override
     public String toString() {
         return "House{" +
-                "house=" + house +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", price=" + price +
                 ", district='" + district + '\'' +
                 '}';
