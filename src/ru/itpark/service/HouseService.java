@@ -15,22 +15,20 @@ public class HouseService {
 
     public void add(
             String name,
-            String district
+            String district,
+            int price
     ) {
         House house = new House(name, 0, district, 0);
         repository.add(house);
     }
 
-    public List<House> findAllByName(String name) {
+    public List<House> findAllByPrice(String price) {
         List<House> result = new ArrayList<House>();
 
-        name = name.toLowerCase();
-
-        for (House house : repository.getAll()) {
-            if (house.getName().toLowerCase().contains(name)) {
-                result.add(house);
-            }
+        for (House house : result) {
+            if (house.getPrice().)
         }
+
         return result;
     }
 }
